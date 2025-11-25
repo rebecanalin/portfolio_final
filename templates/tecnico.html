@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação Técnica Profissionalizante</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link para a página CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="main-header d-flex justify-content-between align-items-center pt-4 pb-4">
+        <div class="logo">rn.</div>
+        <nav class="main-nav">
+            <ul class="list-unstyled d-flex mb-0">
+                <li class="ms-4">
+                    <a href="{{ url_for('inicio') }}#contato" class="text-decoration-none text-dark">Contato</a>
+                </li>
+
+                <li class="ms-4">
+                    <a href="{{ url_for('inicio') }}#trabalhos" class="text-decoration-none text-dark">← Início</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="area-header pt-5 pb-4">
+            <h1 class="display-5 fw-normal">Técnico Profissionalizante</h1>
+            <p class="lead text-muted">Projetos de Internet das Coisas</p>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="projects-list py-5">
+
+            <article class="project-item row my-5">
+
+                <div class="project-details col-md-6">
+                    <h3 class="project-number fs-5">04 / Modelagem Conceitual de Banco de Dados </h3>
+                    <p class="project-description mt-3">
+                        Criação de uma modelagem conceitual simples de um banco de dados de demonstração.
+                    </p>
+                </div>
+
+                <div class="project-media col-md-6 mt-4 mt-md-0">
+                    <img src="{{ url_for('static', filename='recursos/modelagem.png') }}" alt="Modelagem conceitual de dados"
+                        class="img-fluid">
+                </div>
+            </article>
+
+            <hr class="project-divider my-5">
+
+            <article class="project-item row my-5">
+                <div class="project-details col-md-6">
+                    <h3 class="project-number fs-5">04 / Calculadora em Java </h3>
+                    <p class="project-description mt-3">
+                        Desenvolvimento de uma calculadora simples em Java, capaz de executar cálculos de
+                        adição, subtração, multiplicação e divisão.
+                    </p>
+                    <a href="https://senacspedu-my.sharepoint.com/:u:/g/personal/rebeca_snalin_senacsp_edu_br/IQCW5pT2UqZURoDl1U-Elqk-AWBzYBk3wrk9KdACmFuO070?e=4tzqNZ" class="project-link text-decoration-none text-dark mt-4 d-block fw-bold"> Ver código
+                        ->
+                    </a>
+                </div>
+
+                <div class="project-media col-md-6 mt-4 mt-md-0">
+                    <img src="{{ url_for('static', filename='recursos/calculadora.jpg') }}" alt="Foto de uma calculadora"
+                        class="img-fluid">
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="text-center text-muted py-4">&copy; 2025 Rebeca Nalin. Portfólio Acadêmico.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

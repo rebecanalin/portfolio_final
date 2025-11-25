@@ -1,0 +1,192 @@
+
+/*
+ * 1. CONFIGURAÇÕES GLOBAIS E TIPOGRAFIA
+ * As classes do Bootstrap definem a fonte padrão (ex: system-ui),
+ * mas podemos ajustá-la e redefinir o background.
+ */
+:root {
+    /* Cor de fundo muito clara, quase branca */
+    --bs-body-bg: #f8f8f8; 
+    /* Cor do texto principal */
+    --bs-body-color: #212529;
+}
+
+body {
+    /* Aplica a cor de fundo definida */
+    background-color: var(--bs-body-bg); 
+    /* Garante que o texto se alinhe bem */
+    font-family: 'Stack Sans Headline', sans-serif; /* Define a fonte-padrão como Stack Sans Headline*/
+}
+
+/* Títulos mais pesados */
+h1, h2, h3, h4 {
+    font-family: 'Stack Sans Headline', sans-serif;
+}
+
+ 
+/* 2. ESTILIZAÇÃO DA NAVEGAÇÃO SUPERIOR*/
+
+main, header {
+    /* Define o espaçamento lateral no design */
+    padding-left: 80px;
+    padding-right: 80px;
+    /* Centraliza o conteúdo (pode ser ajustado) */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.list-unstyled { /* Configura a fonte do menu superior.*/
+    font-family: 'Stack Sans Headline', sans-serif;
+}
+
+/* O logo "rn." */
+.logo {
+    font-weight: 700; /* Bold */
+    font-size: 1.5rem;
+}
+
+/* Criação do detalhe de "linha" abaixo de cada opção do menu*/
+.main-nav a {
+    text-decoration: none; 
+    color: var(--bs-body-color);
+    /* ESSENCIAL: Referência de posição para a linha */
+    position: relative; 
+    padding-bottom: 3px; 
+}
+
+/* Cria o elemento da linha (inicialmente invisível/sem largura) */
+.main-nav a::after {
+    content: ''; 
+    position: absolute; 
+    left: 0;
+    bottom: 0;
+    height: 2px; 
+    background-color: #212529; /* Cor da linha */
+    width: 0; /* Largura inicial zero */
+    
+    /* Define a animação (duração de 0.3s) */
+    transition: width 0.3s ease-out; 
+}
+
+/* Ação de Hover: Expande a largura para 100% */
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/*
+ * 3. HERO SECTION (Usando Flexbox do Bootstrap implícito)
+ */
+.Hero-section {
+    /* Espaçamento vertical, se necessário */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.Hero-section h1 {
+    /* Estilo do título principal, grande e em caixa baixa */
+    font-size: 4rem; 
+    font-weight: 700; /* Bold */
+    line-height: 1.1;
+    text-transform: lowercase;
+}
+
+
+.profile-icon{
+    /* Define a largura e altura fixas */
+    width: 300px; 
+    height: 350px;
+    /* Arredonda as bordas para criar um círculo */
+    border-radius: 30%; 
+    /* Garante que a imagem preencha o espaço sem distorcer e corte o excesso */
+    object-fit: cover;
+    /*Adiciona uma pequena borda para destacar */
+    border: 2px solid #dee2e6; /* Cor cinza clara */
+    
+    /* Adiciona uma sombra sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.Hero-section p {
+    /* Cor mais suave para o texto de descrição */
+    color: #6c757d; 
+    max-width: 80%;
+    margin-top: 2rem;
+    font-family: 'Stack Sans Headline', sans-serif;
+    font-weight: 100;
+}
+
+.scroll-down {
+    text-decoration: none;
+    color: var(--bs-body-color);
+    font-size: 2rem;
+    display: block;
+    margin-top: 5rem;
+    font-family: 'Stack Sans Headline', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * 4. ESTILIZAÇÃO DA SEÇÃO DE ÁREAS DO SABER
+ * Focando em links, espaçamento e a linha divisória.
+ */
+
+.projects-section h2::before {
+    /* O código Unicode do emoji, precedido por '\' */
+    content: "\1F4DA"; 
+    
+    /* Ajusta o espaçamento entre o emoji e o texto */
+    margin-right: 10px;
+}
+
+ .areas-index-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+.area-link {
+    /* Transforma o link em um bloco para ocupar toda a largura e ser clicável */
+    display: block;
+    text-decoration: none; /* Remove sublinhado padrão */
+    color: var(--bs-body-color);
+    padding: 2rem 0; /* Espaçamento vertical grande */
+    transition: background-color 0.2s;
+}
+
+.area-link:hover {
+    /* Efeito sutil ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.03); 
+}
+
+.area-number {
+    /* Número/Título da Área, mais sutil */
+    font-family: 'Stack Sans Headline', sans-serif;
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.area-description {
+    /* Sub-descrição das matérias */
+    font-family: 'Stack Sans Headline', sans-serif;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Linha divisória fina, como no design (utilizando o <hr> nativo e estilizado) */
+hr.project-divider {
+    border: 0;
+    height: 1px;
+    background-color: #dee2e6; /* Cor cinza clara */
+    margin: 0; /* Remove margens extras */
+}
+
+/*
+ * 5. AJUSTES FINOS PARA COMPONENTES DO FORMULÁRIO
+ */
+.contact-section, .voting-section {
+    padding: 4rem 0;
+}

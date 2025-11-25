@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciências da Natureza e Suas Tecnologias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link para a página CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="main-header d-flex justify-content-between align-items-center pt-4 pb-4">
+        <div class="logo">rn.</div>
+        <nav class="main-nav">
+            <ul class="list-unstyled d-flex mb-0">
+                <li class="ms-4">
+                    <a href="{{ url_for('inicio') }}#contato" class="text-decoration-none text-dark">Contato</a>
+                </li>
+
+                <li class="ms-4">
+                    <a href="{{ url_for('inicio') }}#trabalhos" class="text-decoration-none text-dark">← Início</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="area-header pt-5 pb-4">
+            <h1 class="display-5 fw-normal">Naturezas</h1>
+            <p class="lead text-muted">Trabalhos de Biologia, Física e Química</p>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="projects-list py-5">
+
+            <article class="project-item row my-5">
+
+                <div class="project-details col-md-6">
+                    <h3 class="project-number fs-5">02 / Eletromagnetismo no dia-a-dia</h3>
+                    <p class="project-description mt-3">
+                        Fizemos uma pesquisa para entender o uso do eletromagnetismo em objetos e processos da rotina 
+                        das pessoas. Demos exemplos de uso de bobinas e solenóides em dispositivos muito presentes em nossas vidas, 
+                        entendendo a importância da física no funcionamento do mundo. 
+                    </p>
+                    <span class="tech-details text-muted small d-block mt-2">
+                        **Disciplina:* Física
+                    </span>
+                    <a href="https://docs.google.com/document/d/1SCoLdkf-_8HhNYMMKx2hsYP8m_WySFgOPtuJ7_wyHOw/edit?usp=sharing" class="project-link text-decoration-none text-dark mt-4 d-block fw-bold">Acessar o documento
+                        →</a>
+                </div>
+
+                <div class="project-media col-md-6 mt-4 mt-md-0">
+                    <img src="{{ url_for('static', filename='recursos/eletromagnetismo.jpg') }}" alt="Foto de eletromagnetismo"
+                        class="img-fluid">
+                </div>
+            </article>
+
+            <hr class="project-divider my-5">
+
+            <article class="project-item row my-5">
+                <div class="project-details col-md-6">
+                    <h3 class="project-number fs-5">02 / Reino das Plantas</h3>
+                    <p class="project-description mt-3">
+                        Realizamos uma pesquisa sobre o reino plantae, que abranges as espécies de plantas diversas.
+                        Abordamos suas características gerais, utilidades, e listamos as peculiaridades de cada tipo de 
+                        espécie: pteridófitas, gimnospermas, angiospermas e briófitas.
+                    </p>
+                    <span class="tech-details text-muted small d-block mt-2">
+                        **Disciplina:** Biologia
+                    </span>
+                    <a href="https://docs.google.com/document/d/1Dna11XVGN1FdIni3O3-jKla5skz8IU4LBxDrsLWQ_8o/edit?usp=sharing" class="project-link text-decoration-none text-dark mt-4 d-block fw-bold">Acesse o documento
+                        →</a>
+                </div>
+
+                <div class="project-media col-md-6 mt-4 mt-md-0">
+                    <img src="{{ url_for('static', filename='recursos/plantas.png') }}" alt="Foto de plantas diversas"
+                        class="img-fluid">
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="text-center text-muted py-4">&copy; 2025 Rebeca Nalin. Portfólio Acadêmico.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
